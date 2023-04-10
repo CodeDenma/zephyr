@@ -836,7 +836,7 @@ foreach(zephyr_lib ${ZEPHYR_LIBS_PROPERTY})
           "No SOURCES given to Zephyr library: ${zephyr_lib}\nExcluding target from build."
         )
       endif()
-      target_sources(${zephyr_lib} PRIVATE ${ZEPHYR_BASE}/misc/empty_file.c src/hold_multiple_keys.c)
+      target_sources(${zephyr_lib} PRIVATE ${ZEPHYR_BASE}/misc/empty_file.c)
       set_property(TARGET ${zephyr_lib} PROPERTY EXCLUDE_FROM_ALL TRUE)
       list(REMOVE_ITEM ZEPHYR_LIBS_PROPERTY ${zephyr_lib})
       continue()
